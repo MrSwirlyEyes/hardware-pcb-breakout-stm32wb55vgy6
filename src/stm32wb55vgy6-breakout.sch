@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1215,8 +1215,8 @@ For details on how to manage these GPIOs, refer to the Backup domain and RTC reg
 <wire x1="-0.525" y1="-0.25" x2="-0.525" y2="0.25" width="0.12" layer="51"/>
 <wire x1="-0.525" y1="0.25" x2="0.525" y2="0.25" width="0.12" layer="51"/>
 <wire x1="0.525" y1="0.25" x2="0.525" y2="-0.25" width="0.12" layer="51"/>
-<smd name="1" x="-0.4575" y="0" dx="0.5851" dy="0.6118" layer="1" thermals="no"/>
-<smd name="2" x="0.4575" y="0" dx="0.5851" dy="0.6118" layer="1" thermals="no"/>
+<smd name="1" x="-0.4575" y="0" dx="0.5851" dy="0.6118" layer="1"/>
+<smd name="2" x="0.4575" y="0" dx="0.5851" dy="0.6118" layer="1"/>
 <text x="0" y="0.635" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-0.635" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
 <wire x1="-0.95" y1="0.55" x2="-0.95" y2="-0.55" width="0.127" layer="39"/>
@@ -2908,6 +2908,736 @@ For details on how to manage these GPIOs, refer to the Backup domain and RTC reg
 </deviceset>
 </devicesets>
 </library>
+<library name="_leds">
+<packages>
+<package name="LEDC1005X40_LED-0402" urn="urn:adsk.eagle:footprint:2899409/2" locally_modified="yes">
+<description>CHIP, 1 X 0.5 X 0.4 mm body
+&lt;p&gt;CHIP package with body size 1 X 0.5 X 0.4 mm&lt;/p&gt;</description>
+<circle x="-1.397" y="0" radius="0.2" width="0" layer="21"/>
+<wire x1="0.5" y1="0.4409" x2="-0.9809" y2="0.4409" width="0.12" layer="21"/>
+<wire x1="-0.9809" y1="0.4409" x2="-0.9809" y2="-0.4409" width="0.12" layer="21"/>
+<wire x1="-0.9809" y1="-0.4409" x2="0.5" y2="-0.4409" width="0.12" layer="21"/>
+<wire x1="0.5" y1="-0.25" x2="-0.5" y2="-0.25" width="0.12" layer="51"/>
+<wire x1="-0.5" y1="-0.25" x2="-0.5" y2="0.25" width="0.12" layer="51"/>
+<wire x1="-0.5" y1="0.25" x2="0.5" y2="0.25" width="0.12" layer="51"/>
+<wire x1="0.5" y1="0.25" x2="0.5" y2="-0.25" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="-0.55" x2="1.05" y2="-0.55" width="0.127" layer="39"/>
+<wire x1="1.05" y1="-0.55" x2="1.05" y2="0.55" width="0.127" layer="39"/>
+<wire x1="1.05" y1="0.55" x2="-1.05" y2="0.55" width="0.127" layer="39"/>
+<wire x1="-1.05" y1="0.55" x2="-1.05" y2="-0.55" width="0.127" layer="39"/>
+<smd name="A" x="-0.5" y="0" dx="0.4539" dy="0.5539" layer="1"/>
+<smd name="K" x="0.5" y="0" dx="0.4539" dy="0.5539" layer="1"/>
+<text x="0" y="0.6" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.6" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
+<package name="LEDC1608X80_LED-0603" urn="urn:adsk.eagle:footprint:2959496/2" locally_modified="yes">
+<description>CHIP, 1.6 X 0.8 X 0.8 mm body
+&lt;p&gt;CHIP package with body size 1.6 X 0.8 X 0.8 mm&lt;/p&gt;</description>
+<circle x="-1.9176" y="0" radius="0.1" width="0" layer="21"/>
+<wire x1="0.85" y1="0.6786" x2="-1.4686" y2="0.6786" width="0.12" layer="21"/>
+<wire x1="-1.4686" y1="0.6786" x2="-1.4686" y2="-0.6786" width="0.12" layer="21"/>
+<wire x1="-1.4686" y1="-0.6786" x2="0.85" y2="-0.6786" width="0.12" layer="21"/>
+<wire x1="0.85" y1="-0.45" x2="-0.85" y2="-0.45" width="0.12" layer="51"/>
+<wire x1="-0.85" y1="-0.45" x2="-0.85" y2="0.45" width="0.12" layer="51"/>
+<wire x1="-0.85" y1="0.45" x2="0.85" y2="0.45" width="0.12" layer="51"/>
+<wire x1="0.85" y1="0.45" x2="0.85" y2="-0.45" width="0.12" layer="51"/>
+<wire x1="-1.6" y1="-0.8" x2="-1.6" y2="0.8" width="0.127" layer="39"/>
+<wire x1="-1.6" y1="0.8" x2="1.6" y2="0.8" width="0.127" layer="39"/>
+<wire x1="1.6" y1="0.8" x2="1.6" y2="-0.8" width="0.127" layer="39"/>
+<wire x1="1.6" y1="-0.8" x2="-1.6" y2="-0.8" width="0.127" layer="39"/>
+<smd name="A" x="-0.7346" y="0" dx="0.96" dy="0.9291" layer="1" thermals="no"/>
+<smd name="K" x="0.7346" y="0" dx="0.96" dy="0.9291" layer="1" thermals="no"/>
+<text x="0" y="0.8" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.8" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
+<package name="LEDC2012X120_LED-0805" urn="urn:adsk.eagle:footprint:2966316/2" locally_modified="yes">
+<description>CHIP, 2 X 1.25 X 1.2 mm body
+&lt;p&gt;CHIP package with body size 2 X 1.25 X 1.2 mm&lt;/p&gt;</description>
+<circle x="-2.286" y="0" radius="0.3" width="0" layer="21"/>
+<wire x1="1.05" y1="0.9036" x2="-1.7186" y2="0.9036" width="0.12" layer="21"/>
+<wire x1="-1.7186" y1="0.9036" x2="-1.7186" y2="-0.9036" width="0.12" layer="21"/>
+<wire x1="-1.7186" y1="-0.9036" x2="1.05" y2="-0.9036" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-0.675" x2="-1.05" y2="-0.675" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="-0.675" x2="-1.05" y2="0.675" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="0.675" x2="1.05" y2="0.675" width="0.12" layer="51"/>
+<wire x1="1.05" y1="0.675" x2="1.05" y2="-0.675" width="0.12" layer="51"/>
+<wire x1="-1.905" y1="-1.016" x2="1.905" y2="-1.016" width="0.127" layer="39"/>
+<wire x1="1.905" y1="-1.016" x2="1.905" y2="1.016" width="0.127" layer="39"/>
+<wire x1="1.905" y1="1.016" x2="-1.905" y2="1.016" width="0.127" layer="39"/>
+<wire x1="-1.905" y1="1.016" x2="-1.905" y2="-1.016" width="0.127" layer="39"/>
+<smd name="A" x="-0.9596" y="0" dx="1.01" dy="1.3791" layer="1"/>
+<smd name="K" x="0.9596" y="0" dx="1.01" dy="1.3791" layer="1"/>
+<text x="0" y="1" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
+<package name="LEDRD254W50D590H860B" urn="urn:adsk.eagle:footprint:8856570/1" locally_modified="yes">
+<description>Radial LED (Round), 2.54 mm pitch, 5.90 mm body diameter, 8.60 mm body height
+&lt;p&gt;Radial LED (Round) package with 2.54 mm pitch, 0.50 mm lead width, 0.50 mm lead thickness, 5.90 mm body diameter and 8.60 mm body height&lt;/p&gt;</description>
+<wire x1="2.655" y1="1.2859" x2="-2.95" y2="0" width="0.12" layer="21" curve="154.1581"/>
+<wire x1="2.655" y1="-1.2859" x2="-2.95" y2="0" width="0.12" layer="21" curve="-154.1581"/>
+<wire x1="2.655" y1="1.2859" x2="2.655" y2="-1.2859" width="0.12" layer="21"/>
+<wire x1="-1.983" y1="-1.617" x2="-1.233" y2="-1.617" width="0.12" layer="21"/>
+<wire x1="-1.608" y1="-1.242" x2="-1.608" y2="-1.992" width="0.12" layer="21"/>
+<pad name="A" x="-1.27" y="0" drill="1" diameter="1.85"/>
+<pad name="K" x="1.27" y="0" drill="1" diameter="1.85"/>
+<circle x="0" y="0" radius="2.95" width="0.12" layer="51"/>
+<text x="0" y="1.6" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.5" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+<circle x="0" y="0" radius="3.1" width="0.127" layer="39"/>
+<wire x1="-2.4" y1="-1.1" x2="2.4" y2="-1.1" width="0.127" layer="40"/>
+<wire x1="2.4" y1="-1.1" x2="2.4" y2="1.1" width="0.127" layer="40"/>
+<wire x1="2.4" y1="1.1" x2="-2.4" y2="1.1" width="0.127" layer="40"/>
+<wire x1="-2.4" y1="1.1" x2="-2.4" y2="-1.1" width="0.127" layer="40"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="LEDC1005X40" urn="urn:adsk.eagle:package:2899303/3" locally_modified="yes" type="model">
+<description>CHIP, 1 X 0.5 X 0.4 mm body
+&lt;p&gt;CHIP package with body size 1 X 0.5 X 0.4 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="LEDC1005X40_LED-0402"/>
+</packageinstances>
+</package3d>
+<package3d name="LEDC1608X80" urn="urn:adsk.eagle:package:2959495/3" locally_modified="yes" type="model">
+<description>CHIP, 1.6 X 0.8 X 0.8 mm body
+&lt;p&gt;CHIP package with body size 1.6 X 0.8 X 0.8 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="LEDC1608X80_LED-0603"/>
+</packageinstances>
+</package3d>
+<package3d name="LEDC2012X120" urn="urn:adsk.eagle:package:2966314/3" locally_modified="yes" type="model">
+<description>CHIP, 2 X 1.25 X 1.2 mm body
+&lt;p&gt;CHIP package with body size 2 X 1.25 X 1.2 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="LEDC2012X120_LED-0805"/>
+</packageinstances>
+</package3d>
+<package3d name="LEDRD254W50D590H860B" urn="urn:adsk.eagle:package:8856559/1" locally_modified="yes" type="model">
+<description>Radial LED (Round), 2.54 mm pitch, 5.90 mm body diameter, 8.60 mm body height
+&lt;p&gt;Radial LED (Round) package with 2.54 mm pitch, 0.50 mm lead width, 0.50 mm lead thickness, 5.90 mm body diameter and 8.60 mm body height&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="LEDRD254W50D590H860B"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="LED">
+<pin name="K" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="A" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+<wire x1="1.27" y1="0" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0" x2="-1.27" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.032" y1="-0.762" x2="-3.429" y2="-2.159" width="0.1524" layer="94"/>
+<wire x1="-1.905" y1="-1.905" x2="-3.302" y2="-3.302" width="0.1524" layer="94"/>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.429" y="-2.159"/>
+<vertex x="-3.048" y="-1.27"/>
+<vertex x="-2.54" y="-1.778"/>
+</polygon>
+<polygon width="0.1524" layer="94">
+<vertex x="-3.302" y="-3.302"/>
+<vertex x="-2.921" y="-2.413"/>
+<vertex x="-2.413" y="-2.921"/>
+</polygon>
+<text x="0.254" y="0.254" size="1.27" layer="95" font="vector" ratio="10">&gt;NAME</text>
+<text x="0.254" y="-2.794" size="0.635" layer="96" font="vector" ratio="10" align="top-left">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LED" prefix="LED" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="LED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_SMD-0402_DISCRETE_BLUE" package="LEDC1005X40_LED-0402">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2899303/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="https://www.bivar.com/portals/0/products/SM0402BWC.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=492-2203-1-ND" constant="no"/>
+<attribute name="DISTPN" value="492-2203-1-ND" constant="no"/>
+<attribute name="MFR" value="Bivar Inc." constant="no"/>
+<attribute name="MPN" value="SM0402BWC" constant="no"/>
+<attribute name="VALUE" value="BLUE" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0402_DISCRETE_RED" package="LEDC1005X40_LED-0402">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2899303/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="https://www.bivar.com/portals/0/products/SM0402RC.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=492-2208-1-ND" constant="no"/>
+<attribute name="DISTPN" value="492-2208-1-ND" constant="no"/>
+<attribute name="MFR" value="Bivar Inc." constant="no"/>
+<attribute name="MPN" value="SM0402RC" constant="no"/>
+<attribute name="VALUE" value="RED" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0402_DISCRETE_GREEN" package="LEDC1005X40_LED-0402">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2899303/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="https://www.bivar.com/portals/0/products/SM0402GC.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=492-2205-1-ND" constant="no"/>
+<attribute name="DISTPN" value="492-2205-1-ND" constant="no"/>
+<attribute name="MFR" value="Bivar Inc." constant="no"/>
+<attribute name="MPN" value="SM0402GC" constant="no"/>
+<attribute name="VALUE" value="GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0603_DISCRETE_BLUE" package="LEDC1608X80_LED-0603">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2959495/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://katalog.we-online.de/led/datasheet/150060BS75000.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=732-4966-1-ND" constant="no"/>
+<attribute name="DISTPN" value="732-4966-1-ND" constant="no"/>
+<attribute name="MFR" value="Wurth Electronics Inc." constant="no"/>
+<attribute name="MPN" value="150060BS75000" constant="no"/>
+<attribute name="VALUE" value="BLUE" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0805_DISCRETE_BLUE" package="LEDC2012X120_LED-0805">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2966314/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://optoelectronics.liteon.com/upload/download/DS-22-99-0226/LTST-C170TBKT.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=160-1579-1-ND" constant="no"/>
+<attribute name="DISTPN" value="160-1579-1-ND" constant="no"/>
+<attribute name="MFR" value="Lite-On Inc." constant="no"/>
+<attribute name="MPN" value="LTST-C170TBKT" constant="no"/>
+<attribute name="VALUE" value="BLUE" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0603_DISCRETE_RED" package="LEDC1608X80_LED-0603">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2959495/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://katalog.we-online.de/led/datasheet/150060RS75000.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=732-4978-1-ND" constant="no"/>
+<attribute name="DISTPN" value="732-4978-1-ND" constant="no"/>
+<attribute name="MFR" value="Wurth Electronics Inc." constant="no"/>
+<attribute name="MPN" value="150060RS75000" constant="no"/>
+<attribute name="VALUE" value="RED" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0805_DISCRETE_GREEN" package="LEDC2012X120_LED-0805">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2966314/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://optoelectronics.liteon.com/upload/download/DS22-2000-073/LTST-C170KGKT.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=160-1414-1-ND" constant="no"/>
+<attribute name="DISTPN" value="160-1414-1-ND" constant="no"/>
+<attribute name="MFR" value="Lite-On Inc." constant="no"/>
+<attribute name="MPN" value="LTST-C170KGKT" constant="no"/>
+<attribute name="VALUE" value="GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0805_DISCRETE_RED" package="LEDC2012X120_LED-0805">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2966314/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://optoelectronics.liteon.com/upload/download/DS-22-99-0150/LTST-C170KRKT.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=160-1415-1-ND" constant="no"/>
+<attribute name="DISTPN" value="160-1415-1-ND" constant="no"/>
+<attribute name="MFR" value="Lite-On Inc." constant="no"/>
+<attribute name="MPN" value="LTST-C170KRKT" constant="no"/>
+<attribute name="VALUE" value="RED" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0805_DISCRETE_YELLOW" package="LEDC2012X120_LED-0805">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2966314/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://optoelectronics.liteon.com/upload/download/DS-22-99-0188/LTST-C170KSKT.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=160-1416-1-ND" constant="no"/>
+<attribute name="DISTPN" value="160-1416-1-ND" constant="no"/>
+<attribute name="MFR" value="Lite-On Inc." constant="no"/>
+<attribute name="MPN" value="LTST-C170KSKT" constant="no"/>
+<attribute name="VALUE" value="YELLOW" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0805_DISCRETE_ORANGE" package="LEDC2012X120_LED-0805">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2966314/3"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://optoelectronics.liteon.com/upload/download/DS-22-99-0185/LTST-C170KFKT.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=160-1413-1-ND" constant="no"/>
+<attribute name="DISTPN" value="160-1413-1-ND" constant="no"/>
+<attribute name="MFR" value="Lite-On Inc." constant="no"/>
+<attribute name="MPN" value="LTST-C170KFKT" constant="no"/>
+<attribute name="VALUE" value="ORANGE" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_PTH_T-1-3/4_5MM_NO-COLOR" package="LEDRD254W50D590H860B">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8856559/1"/>
+</package3dinstances>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="_PTH_T-1-3/4_5MM_RED" package="LEDRD254W50D590H860B">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8856559/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.kingbrightusa.com/images/catalog/SPEC/WP7113SEC-J3.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=WP7113SEC%2FJ3" constant="no"/>
+<attribute name="DISTPN" value="754-1379-ND" constant="no"/>
+<attribute name="MFR" value="Kingbright" constant="no"/>
+<attribute name="MPN" value="WP7113SEC/J3" constant="no"/>
+<attribute name="VALUE" value="T-1-3/4 RED" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_PTH_T-1-3/4_5MM_GREEN" package="LEDRD254W50D590H860B">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8856559/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.kingbrightusa.com/images/catalog/SPEC/WP7113SGC.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=WP7113SGC" constant="no"/>
+<attribute name="DISTPN" value="754-1273-ND" constant="no"/>
+<attribute name="MFR" value="Kingbright" constant="no"/>
+<attribute name="MPN" value="WP7113SGC" constant="no"/>
+<attribute name="VALUE" value="T-1-3/4 GREEN" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_PTH_T-1-3/4_5MM_BLUE" package="LEDRD254W50D590H860B">
+<connects>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="K" pad="K"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:8856559/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.kingbrightusa.com/images/catalog/SPEC/WP7113QBC-D.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=WP7113QBC%2FD" constant="no"/>
+<attribute name="DISTPN" value="754-1489-ND" constant="no"/>
+<attribute name="MFR" value="Kingbright" constant="no"/>
+<attribute name="MPN" value="WP7113QBC/D" constant="no"/>
+<attribute name="VALUE" value="T-1-3/4 BLUE" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="_resistors">
+<packages>
+<package name="RESC1005X35_SMD-0402" urn="urn:adsk.eagle:footprint:2899254/4" locally_modified="yes">
+<description>CHIP, 1 X 0.5 X 0.35 mm body
+&lt;p&gt;CHIP package with body size 1 X 0.5 X 0.35 mm&lt;/p&gt;</description>
+<wire x1="0.525" y1="0.464" x2="-0.525" y2="0.464" width="0.12" layer="21"/>
+<wire x1="0.525" y1="-0.464" x2="-0.525" y2="-0.464" width="0.12" layer="21"/>
+<wire x1="0.525" y1="-0.275" x2="-0.525" y2="-0.275" width="0.12" layer="51"/>
+<wire x1="-0.525" y1="-0.275" x2="-0.525" y2="0.275" width="0.12" layer="51"/>
+<wire x1="-0.525" y1="0.275" x2="0.525" y2="0.275" width="0.12" layer="51"/>
+<wire x1="0.525" y1="0.275" x2="0.525" y2="-0.275" width="0.12" layer="51"/>
+<wire x1="-0.95" y1="0.55" x2="-0.95" y2="-0.55" width="0.127" layer="39"/>
+<wire x1="-0.95" y1="-0.55" x2="0.95" y2="-0.55" width="0.127" layer="39"/>
+<wire x1="0.95" y1="-0.55" x2="0.95" y2="0.55" width="0.127" layer="39"/>
+<wire x1="0.95" y1="0.55" x2="-0.95" y2="0.55" width="0.127" layer="39"/>
+<smd name="1" x="-0.4825" y="0" dx="0.5351" dy="0.6" layer="1"/>
+<smd name="2" x="0.4825" y="0" dx="0.5351" dy="0.6" layer="1"/>
+<text x="0" y="0.635" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.635" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
+<package name="RESC2012X60_SMD-0805" urn="urn:adsk.eagle:footprint:3034997/4">
+<description>CHIP, 2 X 1.25 X 0.6 mm body
+&lt;p&gt;CHIP package with body size 2 X 1.25 X 0.6 mm&lt;/p&gt;</description>
+<wire x1="1.05" y1="0.9036" x2="-1.05" y2="0.9036" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-0.9036" x2="-1.05" y2="-0.9036" width="0.12" layer="21"/>
+<wire x1="1.05" y1="-0.675" x2="-1.05" y2="-0.675" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="-0.675" x2="-1.05" y2="0.675" width="0.12" layer="51"/>
+<wire x1="-1.05" y1="0.675" x2="1.05" y2="0.675" width="0.12" layer="51"/>
+<wire x1="1.05" y1="0.675" x2="1.05" y2="-0.675" width="0.12" layer="51"/>
+<wire x1="-1.673" y1="-1" x2="1.673" y2="-1" width="0.127" layer="39"/>
+<wire x1="1.673" y1="-1" x2="1.673" y2="1" width="0.127" layer="39"/>
+<wire x1="1.673" y1="1" x2="-1.673" y2="1" width="0.127" layer="39"/>
+<wire x1="-1.673" y1="1" x2="-1.673" y2="-1" width="0.127" layer="39"/>
+<smd name="1" x="-0.9954" y="0" dx="0.8384" dy="1.3791" layer="1"/>
+<smd name="2" x="0.9954" y="0" dx="0.8384" dy="1.3791" layer="1"/>
+<text x="0" y="1.1" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1.1" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
+<package name="RESC1608X65_SMD-0603" urn="urn:adsk.eagle:footprint:2959475/4">
+<description>CHIP, 1.6 X 0.8 X 0.65 mm body
+&lt;p&gt;CHIP package with body size 1.6 X 0.8 X 0.65 mm&lt;/p&gt;</description>
+<wire x1="0.85" y1="0.6786" x2="-0.85" y2="0.6786" width="0.12" layer="21"/>
+<wire x1="0.85" y1="-0.6786" x2="-0.85" y2="-0.6786" width="0.12" layer="21"/>
+<wire x1="0.85" y1="-0.45" x2="-0.85" y2="-0.45" width="0.12" layer="51"/>
+<wire x1="-0.85" y1="-0.45" x2="-0.85" y2="0.45" width="0.12" layer="51"/>
+<wire x1="-0.85" y1="0.45" x2="0.85" y2="0.45" width="0.12" layer="51"/>
+<wire x1="0.85" y1="0.45" x2="0.85" y2="-0.45" width="0.12" layer="51"/>
+<wire x1="-1.5" y1="-0.8" x2="1.5" y2="-0.8" width="0.127" layer="39"/>
+<wire x1="1.5" y1="-0.8" x2="1.5" y2="0.8" width="0.127" layer="39"/>
+<wire x1="1.5" y1="0.8" x2="-1.5" y2="0.8" width="0.127" layer="39"/>
+<wire x1="-1.5" y1="0.8" x2="-1.5" y2="-0.8" width="0.127" layer="39"/>
+<smd name="1" x="-0.8204" y="0" dx="0.7884" dy="0.9291" layer="1"/>
+<smd name="2" x="0.8204" y="0" dx="0.7884" dy="0.9291" layer="1"/>
+<text x="0" y="1" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-1" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
+<package name="RESAD990W55L630D240B" urn="urn:adsk.eagle:footprint:4254583/2">
+<description>AXIAL Resistor, 9.9 mm pitch, 6.3 mm body length, 2.4 mm body diameter
+&lt;p&gt;AXIAL Resistor package with 9.9 mm pitch, 0.55 mm lead diameter, 6.3 mm body length and 2.4 mm body diameter&lt;/p&gt;</description>
+<wire x1="-3.4" y1="1.3" x2="-3.4" y2="-1.3" width="0.12" layer="21"/>
+<wire x1="-3.4" y1="-1.3" x2="3.4" y2="-1.3" width="0.12" layer="21"/>
+<wire x1="3.4" y1="-1.3" x2="3.4" y2="1.3" width="0.12" layer="21"/>
+<wire x1="3.4" y1="1.3" x2="-3.4" y2="1.3" width="0.12" layer="21"/>
+<wire x1="-3.4" y1="0" x2="-4.021" y2="0" width="0.12" layer="21"/>
+<wire x1="3.4" y1="0" x2="4.021" y2="0" width="0.12" layer="21"/>
+<wire x1="3.4" y1="-1.3" x2="-3.4" y2="-1.3" width="0.12" layer="51"/>
+<wire x1="-3.4" y1="-1.3" x2="-3.4" y2="1.3" width="0.12" layer="51"/>
+<wire x1="-3.4" y1="1.3" x2="3.4" y2="1.3" width="0.12" layer="51"/>
+<wire x1="3.4" y1="1.3" x2="3.4" y2="-1.3" width="0.12" layer="51"/>
+<wire x1="-6" y1="-1.4" x2="6" y2="-1.4" width="0.127" layer="39"/>
+<wire x1="6" y1="-1.4" x2="6" y2="1.4" width="0.127" layer="39"/>
+<wire x1="6" y1="1.4" x2="-6" y2="1.4" width="0.127" layer="39"/>
+<wire x1="-6" y1="1.4" x2="-6" y2="-1.4" width="0.127" layer="39"/>
+<pad name="1" x="-4.95" y="0" drill="0.75" diameter="1.35"/>
+<pad name="2" x="4.95" y="0" drill="0.75" diameter="1.35"/>
+<text x="0" y="0.2" size="0.5" layer="25" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.2" size="0.25" layer="27" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+</package>
+<package name="RESAD660W45L340D190B" urn="urn:adsk.eagle:footprint:4254915/2">
+<description>AXIAL Resistor, 6.6 mm pitch, 3.4 mm body length, 1.9 mm body diameter
+&lt;p&gt;AXIAL Resistor package with 6.6 mm pitch, 0.45 mm lead diameter, 3.4 mm body length and 1.9 mm body diameter&lt;/p&gt;</description>
+<wire x1="-1.85" y1="1.05" x2="-1.85" y2="-1.05" width="0.12" layer="21"/>
+<wire x1="-1.85" y1="-1.05" x2="1.85" y2="-1.05" width="0.12" layer="21"/>
+<wire x1="1.85" y1="-1.05" x2="1.85" y2="1.05" width="0.12" layer="21"/>
+<wire x1="1.85" y1="1.05" x2="-1.85" y2="1.05" width="0.12" layer="21"/>
+<wire x1="-1.85" y1="0" x2="-2.421" y2="0" width="0.12" layer="21"/>
+<wire x1="1.85" y1="0" x2="2.421" y2="0" width="0.12" layer="21"/>
+<wire x1="1.85" y1="-1.05" x2="-1.85" y2="-1.05" width="0.12" layer="51"/>
+<wire x1="-1.85" y1="-1.05" x2="-1.85" y2="1.05" width="0.12" layer="51"/>
+<wire x1="-1.85" y1="1.05" x2="1.85" y2="1.05" width="0.12" layer="51"/>
+<wire x1="1.85" y1="1.05" x2="1.85" y2="-1.05" width="0.12" layer="51"/>
+<wire x1="-4.1" y1="-1.2" x2="-4.1" y2="1.2" width="0.127" layer="39"/>
+<wire x1="-4.1" y1="1.2" x2="4.1" y2="1.2" width="0.127" layer="39"/>
+<wire x1="4.1" y1="1.2" x2="4.1" y2="-1.2" width="0.127" layer="39"/>
+<wire x1="4.1" y1="-1.2" x2="-4.1" y2="-1.2" width="0.127" layer="39"/>
+<pad name="1" x="-3.3" y="0" drill="0.65" diameter="1.25"/>
+<pad name="2" x="3.3" y="0" drill="0.65" diameter="1.25"/>
+<text x="0" y="0.2" size="0.5" layer="25" font="vector" ratio="10" rot="SR0" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.2" size="0.25" layer="27" font="vector" ratio="10" rot="SR0" align="top-center">&gt;VALUE</text>
+</package>
+<package name="RESC603X26N" urn="urn:adsk.eagle:footprint:25615215/1" locally_modified="yes">
+<description>Chip, 0.60 X 0.30 X 0.26 mm body
+&lt;p&gt;Chip package with body size 0.60 X 0.30 X 0.26 mm&lt;/p&gt;</description>
+<wire x1="0.3" y1="0.364" x2="-0.3" y2="0.364" width="0.12" layer="21"/>
+<wire x1="0.3" y1="-0.364" x2="-0.3" y2="-0.364" width="0.12" layer="21"/>
+<wire x1="0.3" y1="-0.15" x2="-0.3" y2="-0.15" width="0.12" layer="51"/>
+<wire x1="-0.3" y1="-0.15" x2="-0.3" y2="0.15" width="0.12" layer="51"/>
+<wire x1="-0.3" y1="0.15" x2="0.3" y2="0.15" width="0.12" layer="51"/>
+<wire x1="0.3" y1="0.15" x2="0.3" y2="-0.15" width="0.12" layer="51"/>
+<smd name="1" x="-0.34" y="0" dx="0.32" dy="0.3" layer="1"/>
+<smd name="2" x="0.34" y="0" dx="0.32" dy="0.3" layer="1"/>
+<text x="0" y="0.5" size="0.5" layer="25" ratio="10" align="bottom-center">&gt;NAME</text>
+<text x="0" y="-0.5" size="0.25" layer="27" ratio="10" align="top-center">&gt;VALUE</text>
+<wire x1="-0.65" y1="-0.4" x2="-0.65" y2="0.4" width="0.127" layer="39"/>
+<wire x1="-0.65" y1="0.4" x2="0.65" y2="0.4" width="0.127" layer="39"/>
+<wire x1="0.65" y1="0.4" x2="0.65" y2="-0.4" width="0.127" layer="39"/>
+<wire x1="0.65" y1="-0.4" x2="-0.65" y2="-0.4" width="0.127" layer="39"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="RESC1005X35" urn="urn:adsk.eagle:package:2899165/1" locally_modified="yes" type="model">
+<description>CHIP, 1 X 0.5 X 0.35 mm body
+&lt;p&gt;CHIP package with body size 1 X 0.5 X 0.35 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="RESC1005X35_SMD-0402"/>
+</packageinstances>
+</package3d>
+<package3d name="RESC2012X60" urn="urn:adsk.eagle:package:3034995/1" locally_modified="yes" type="model">
+<description>CHIP, 2 X 1.25 X 0.6 mm body
+&lt;p&gt;CHIP package with body size 2 X 1.25 X 0.6 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="RESC2012X60_SMD-0805"/>
+</packageinstances>
+</package3d>
+<package3d name="RESC1608X65" urn="urn:adsk.eagle:package:2959474/1" locally_modified="yes" type="model">
+<description>CHIP, 1.6 X 0.8 X 0.65 mm body
+&lt;p&gt;CHIP package with body size 1.6 X 0.8 X 0.65 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="RESC1608X65_SMD-0603"/>
+</packageinstances>
+</package3d>
+<package3d name="RESAD990W55L630D240B" urn="urn:adsk.eagle:package:4254576/1" locally_modified="yes" type="model">
+<description>AXIAL Resistor, 9.9 mm pitch, 6.3 mm body length, 2.4 mm body diameter
+&lt;p&gt;AXIAL Resistor package with 9.9 mm pitch, 0.55 mm lead diameter, 6.3 mm body length and 2.4 mm body diameter&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="RESAD990W55L630D240B"/>
+</packageinstances>
+</package3d>
+<package3d name="RESAD660W45L340D190B" urn="urn:adsk.eagle:package:4254914/1" locally_modified="yes" type="model">
+<description>AXIAL Resistor, 6.6 mm pitch, 3.4 mm body length, 1.9 mm body diameter
+&lt;p&gt;AXIAL Resistor package with 6.6 mm pitch, 0.45 mm lead diameter, 3.4 mm body length and 1.9 mm body diameter&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="RESAD660W45L340D190B"/>
+</packageinstances>
+</package3d>
+<package3d name="RESC603X26N" urn="urn:adsk.eagle:package:25615214/1" type="model">
+<description>Chip, 0.60 X 0.30 X 0.26 mm body
+&lt;p&gt;Chip package with body size 0.60 X 0.30 X 0.26 mm&lt;/p&gt;</description>
+<packageinstances>
+<packageinstance name="RESC603X26N"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="RESISTOR">
+<description>Resistor</description>
+<wire x1="-0.254" y1="-0.889" x2="0.381" y2="0.889" width="0.2032" layer="94"/>
+<wire x1="-0.889" y1="0.889" x2="-0.254" y2="-0.889" width="0.2032" layer="94"/>
+<wire x1="-1.524" y1="-0.889" x2="-0.889" y2="0.889" width="0.2032" layer="94"/>
+<wire x1="-2.159" y1="0.889" x2="-1.524" y2="-0.889" width="0.2032" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.159" y2="0.889" width="0.2032" layer="94"/>
+<text x="0" y="-1.143" size="0.635" layer="96" font="vector" ratio="10" align="top-center">&gt;VALUE</text>
+<text x="0" y="1.1176" size="1.27" layer="95" font="vector" ratio="10" align="bottom-center">&gt;NAME</text>
+<wire x1="0.381" y1="0.889" x2="1.016" y2="-0.889" width="0.2032" layer="94"/>
+<wire x1="1.016" y1="-0.889" x2="1.651" y2="0.889" width="0.2032" layer="94"/>
+<wire x1="1.651" y1="0.889" x2="2.286" y2="-0.889" width="0.2032" layer="94"/>
+<wire x1="2.286" y1="-0.889" x2="2.54" y2="0" width="0.2032" layer="94"/>
+<pin name="1" x="-5.08" y="0" visible="off" length="short" direction="pas"/>
+<pin name="2" x="5.08" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="10KΩ" prefix="R" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="RESISTOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="_SMD-0402_1/16W-5%" package="RESC1005X35_SMD-0402">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2899165/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=YAG1281CT-ND" constant="no"/>
+<attribute name="DISTPN" value="YAG1281CT-ND" constant="no"/>
+<attribute name="MFR" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0402JR-0710KP" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0805_1/8W-5%" package="RESC2012X60_SMD-0805">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:3034995/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_9.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=311-10KARCT-ND" constant="no"/>
+<attribute name="DISTPN" value="311-10KARCT-ND" constant="no"/>
+<attribute name="MFR" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0805JR-0710KL" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0603_1/10W-5%" package="RESC1608X65_SMD-0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:2959474/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.yageo.com/documents/recent/PYu-RC_Group_51_RoHS_L_9.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=311-10KGRCT-ND" constant="no"/>
+<attribute name="DISTPN" value="311-10KGRCT-ND" constant="no"/>
+<attribute name="MFR" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603JR-0710KL" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_PTH-207/10_1/4W-5%" package="RESAD990W55L630D240B">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:4254576/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/throughhole/Yageo_LR_CFR_2013.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=CFR-25JB-52-10K" constant="no"/>
+<attribute name="DISTPN" value="10KQBK-ND" constant="no"/>
+<attribute name="MFR" value="Yageo" constant="no"/>
+<attribute name="MPN" value="CFR-25JB-52-10K" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_PTH-204/7_1/6W-5%" package="RESAD660W45L340D190B">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:4254914/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/throughhole/Yageo_LR_CFR_2013.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/products/en?keywords=CFR-12JB-52-10K" constant="no"/>
+<attribute name="DISTPN" value="10KEBK-ND" constant="no"/>
+<attribute name="MFR" value="Yageo" constant="no"/>
+<attribute name="MPN" value="CFR-12JB-52-10K" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="_SMD-0201_1/20W-5%" package="RESC603X26N">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:25615214/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="DATASHEET" value="https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-AC_51_RoHS_L_7.pdf" constant="no"/>
+<attribute name="DIST" value="Digikey" constant="no"/>
+<attribute name="DISTLINK" value="https://www.digikey.com/en/products/detail/yageo/AC0201JR-0710KL/5894883?s=N4IgTCBcDaIJoEEDiBmALCgDAYQCoFoA5AERAF0BfIA" constant="no"/>
+<attribute name="DISTPN" value="YAG3430CT-ND" constant="no"/>
+<attribute name="MFR" value="Yageo" constant="no"/>
+<attribute name="MPN" value="AC0201JR-0710KL" constant="no"/>
+<attribute name="VALUE" value="10K" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2986,6 +3716,10 @@ For details on how to manage these GPIOs, refer to the Backup domain and RTC reg
 <part name="J11" library="_connectors" deviceset="1X06" device="_PTH_VERT_MALE_2.54MM" package3d_urn="urn:adsk.eagle:package:4862719/8" value="PTH VERT MALE"/>
 <part name="J3" library="_connectors" deviceset="1X05" device="_PTH_VERT_MALE_2.54MM" package3d_urn="urn:adsk.eagle:package:25810736/1" value="1x05 MALE VERT"/>
 <part name="J4" library="_connectors" deviceset="1X05" device="_PTH_VERT_MALE_2.54MM" package3d_urn="urn:adsk.eagle:package:25810736/1" value="1x05 MALE VERT"/>
+<part name="SUPPLY3" library="_power_symbols" deviceset="VCC" device=""/>
+<part name="LED1" library="_leds" deviceset="LED" device="_SMD-0402_DISCRETE_BLUE" package3d_urn="urn:adsk.eagle:package:2899303/3" value="BLUE"/>
+<part name="R1" library="_resistors" deviceset="10KΩ" device="_SMD-0402_1/16W-5%" package3d_urn="urn:adsk.eagle:package:2899165/1" value="10K"/>
+<part name="SUPPLY4" library="_power_symbols" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3178,6 +3912,16 @@ For details on how to manage these GPIOs, refer to the Backup domain and RTC reg
 <attribute name="VALUE" x="471.424" y="35.052" size="0.635" layer="96" font="vector" ratio="10" rot="MR0" align="top-right"/>
 <attribute name="NAME" x="471.424" y="51.308" size="1.27" layer="95" font="vector" ratio="10" rot="MR0" align="bottom-right"/>
 </instance>
+<instance part="SUPPLY3" gate="VCC" x="513.08" y="88.9" smashed="yes"/>
+<instance part="LED1" gate="G$1" x="513.08" y="83.82" smashed="yes">
+<attribute name="NAME" x="513.334" y="84.074" size="1.27" layer="95" font="vector" ratio="10"/>
+<attribute name="VALUE" x="513.334" y="81.026" size="0.635" layer="96" font="vector" ratio="10" align="top-left"/>
+</instance>
+<instance part="R1" gate="G$1" x="513.08" y="71.12" smashed="yes" rot="R90">
+<attribute name="VALUE" x="514.223" y="71.12" size="0.635" layer="96" font="vector" ratio="10" rot="R90" align="top-center"/>
+<attribute name="NAME" x="511.9624" y="71.12" size="1.27" layer="95" font="vector" ratio="10" rot="R90" align="bottom-center"/>
+</instance>
+<instance part="SUPPLY4" gate="GND" x="513.08" y="60.96" smashed="yes"/>
 </instances>
 <busses>
 </busses>
@@ -3320,6 +4064,11 @@ For details on how to manage these GPIOs, refer to the Backup domain and RTC reg
 <pinref part="SW1" gate="G$1" pin="1"/>
 <wire x1="25.4" y1="203.2" x2="25.4" y2="208.28" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="SUPPLY4" gate="GND" pin="GND"/>
+<wire x1="513.08" y1="63.5" x2="513.08" y2="66.04" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VBAT" class="0">
 <segment>
@@ -3441,6 +4190,11 @@ For details on how to manage these GPIOs, refer to the Backup domain and RTC reg
 <pinref part="J2" gate="G$1" pin="10"/>
 <wire x1="467.36" y1="63.5" x2="464.82" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="464.82" y1="63.5" x2="464.82" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="LED1" gate="G$1" pin="A"/>
+<pinref part="SUPPLY3" gate="VCC" pin="VCC"/>
+<wire x1="513.08" y1="86.36" x2="513.08" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -4336,6 +5090,13 @@ For details on how to manage these GPIOs, refer to the Backup domain and RTC reg
 <wire x1="464.82" y1="48.26" x2="467.36" y2="48.26" width="0.1524" layer="91"/>
 <label x="464.82" y="48.26" size="1.27" layer="95" font="vector" ratio="10" rot="R180" xref="yes"/>
 <pinref part="J4" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="LED1" gate="G$1" pin="K"/>
+<pinref part="R1" gate="G$1" pin="2"/>
+<wire x1="513.08" y1="76.2" x2="513.08" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
